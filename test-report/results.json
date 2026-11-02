@@ -1,0 +1,1349 @@
+{
+  "config": {
+    "argv": [
+      "/Users/karthikkk/.nvm/versions/node/v24.14.1/bin/node",
+      "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/node_modules/.bin/playwright",
+      "test"
+    ],
+    "configFile": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/playwright.config.ts",
+    "rootDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+    "failOnFlakyTests": false,
+    "forbidOnly": false,
+    "fullyParallel": false,
+    "globalSetup": null,
+    "globalTeardown": null,
+    "globalTimeout": 0,
+    "grep": {},
+    "grepInvert": null,
+    "maxFailures": 0,
+    "metadata": {
+      "actualWorkers": 1
+    },
+    "preserveOutput": "always",
+    "projects": [
+      {
+        "outputDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "setup",
+        "name": "setup",
+        "testDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "testIgnore": [],
+        "testMatch": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "timeout": 30000
+      },
+      {
+        "outputDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "id": "chromium",
+        "name": "chromium",
+        "testDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "testIgnore": [
+          "/.*\\.setup\\.ts/"
+        ],
+        "testMatch": [
+          "**/*.@(spec|test).?(c|m)[jt]s?(x)"
+        ],
+        "timeout": 30000
+      }
+    ],
+    "filteredProjects": [
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "setup",
+        "testDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "snapshotDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "testIgnore": [],
+        "testMatch": {},
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5114",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "actionTimeout": 10000,
+          "navigationTimeout": 15000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "channel": "chrome"
+        },
+        "dependencies": [],
+        "ignoreSnapshots": false,
+        "__projectId": "setup"
+      },
+      {
+        "grep": {},
+        "grepInvert": null,
+        "outputDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts",
+        "repeatEach": 1,
+        "retries": 0,
+        "metadata": {
+          "actualWorkers": 1
+        },
+        "name": "chromium",
+        "testDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "snapshotDir": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests",
+        "testIgnore": {},
+        "testMatch": "**/*.@(spec|test).?(c|m)[jt]s?(x)",
+        "timeout": 30000,
+        "use": {
+          "baseURL": "http://127.0.0.1:5114",
+          "trace": "retain-on-failure",
+          "screenshot": "only-on-failure",
+          "video": "retain-on-failure",
+          "actionTimeout": 10000,
+          "navigationTimeout": 15000,
+          "userAgent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/156.0.8078.4 Safari/537.36",
+          "viewport": {
+            "width": 1280,
+            "height": 720
+          },
+          "screen": {
+            "width": 1920,
+            "height": 1080
+          },
+          "deviceScaleFactor": 1,
+          "isMobile": false,
+          "hasTouch": false,
+          "defaultBrowserType": "chromium",
+          "channel": "chrome",
+          "storageState": "e2e/.auth/admin.json"
+        },
+        "dependencies": [
+          "setup"
+        ],
+        "ignoreSnapshots": false,
+        "__projectId": "chromium"
+      }
+    ],
+    "quiet": false,
+    "reporter": [
+      [
+        "list",
+        null
+      ],
+      [
+        "html",
+        {
+          "outputFolder": "playwright-report",
+          "open": "never"
+        }
+      ],
+      [
+        "junit",
+        {
+          "outputFile": "test-report/results.xml"
+        }
+      ],
+      [
+        "json",
+        {
+          "outputFile": "test-report/results.json"
+        }
+      ]
+    ],
+    "reportSlowTests": {
+      "max": 5,
+      "threshold": 300000
+    },
+    "shard": null,
+    "tags": [],
+    "updateSnapshots": "default",
+    "updateSourceMethod": "patch",
+    "version": "1.64.1",
+    "workers": 1,
+    "webServer": {
+      "command": "node e2e/scripts/start-app.mjs",
+      "url": "http://127.0.0.1:5114",
+      "timeout": 120000,
+      "reuseExistingServer": false,
+      "stdout": "pipe",
+      "stderr": "pipe"
+    }
+  },
+  "suites": [
+    {
+      "title": "00-fixture.setup.ts",
+      "file": "00-fixture.setup.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [
+        {
+          "title": "TR-OPS-01 | initialize a fresh database and deterministic employee fixture",
+          "ok": true,
+          "tags": [],
+          "tests": [
+            {
+              "timeout": 30000,
+              "annotations": [],
+              "expectedStatus": "passed",
+              "projectId": "setup",
+              "projectName": "setup",
+              "results": [
+                {
+                  "workerIndex": 0,
+                  "parallelIndex": 0,
+                  "status": "passed",
+                  "duration": 2104,
+                  "errors": [],
+                  "stdout": [],
+                  "stderr": [],
+                  "retry": 0,
+                  "startTime": "2026-11-02T06:00:34.545Z",
+                  "annotations": [],
+                  "attachments": []
+                }
+              ],
+              "status": "expected"
+            }
+          ],
+          "id": "1c4a5cc22dab7c28eb3a-d18bcf456a4b362a9c47",
+          "file": "00-fixture.setup.ts",
+          "line": 7,
+          "column": 6
+        }
+      ]
+    },
+    {
+      "title": "01-public-navigation.spec.ts",
+      "file": "01-public-navigation.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Public navigation and authorization",
+          "file": "01-public-navigation.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-NAV-01 | public pages render with usable navigation",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 2825,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:37.137Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "57d1062042d1f251e03c-83913c9cd3a40fa6132a",
+              "file": "01-public-navigation.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TR-NAV-02 / TR-AUTH-06 | anonymous user sees auth links and cannot open Create",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 317,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:40.151Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "57d1062042d1f251e03c-0e7a4f59ecccff5880cd",
+              "file": "01-public-navigation.spec.ts",
+              "line": 25,
+              "column": 7
+            },
+            {
+              "title": "TR-UX-02 | mobile navigation and public directory remain usable",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 261,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:40.472Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "57d1062042d1f251e03c-ee005a9f90969af4fcdf",
+              "file": "01-public-navigation.spec.ts",
+              "line": 38,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "02-authentication.spec.ts",
+      "file": "02-authentication.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Authentication and roles",
+          "file": "02-authentication.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-AUTH-03 | invalid credentials show generic feedback",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 358,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:40.741Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b043aacf8ca4edaa8a9e-4042dd02b32837b1ddff",
+              "file": "02-authentication.spec.ts",
+              "line": 8,
+              "column": 7
+            },
+            {
+              "title": "TR-AUTH-01 / TR-AUTH-06 | registered User can view details but cannot mutate employees",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 428,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:41.102Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b043aacf8ca4edaa8a9e-9415fe6745c45400023d",
+              "file": "02-authentication.spec.ts",
+              "line": 19,
+              "column": 7
+            },
+            {
+              "title": "TR-AUTH-04 / TR-AUTH-05 | local return URL is honored and logout ends the session",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 504,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:41.535Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "b043aacf8ca4edaa8a9e-d3f9f23b77616d500097",
+              "file": "02-authentication.spec.ts",
+              "line": 36,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "03-employee-directory.spec.ts",
+      "file": "03-employee-directory.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Employee directory, search, and pagination",
+          "file": "03-employee-directory.spec.ts",
+          "line": 4,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-LIST-01 / TR-LIST-04 | directory shows five records, total, fields, and grade labels",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 288,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:42.046Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c4389f20f15647668f19-0bfbd05f83588a29e0dc",
+              "file": "03-employee-directory.spec.ts",
+              "line": 5,
+              "column": 7
+            },
+            {
+              "title": "TR-LIST-02 | name, email, and grade filters combine with AND",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 376,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:42.338Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c4389f20f15647668f19-6e45479bf2db47c7ac23",
+              "file": "03-employee-directory.spec.ts",
+              "line": 18,
+              "column": 7
+            },
+            {
+              "title": "TR-LIST-03 | pagination retains active filters and Clear resets them",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 467,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:42.718Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c4389f20f15647668f19-1a04d5bf15a32e7e6f92",
+              "file": "03-employee-directory.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "TR-LIST-05 | invalid page values do not cause server errors",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:43.192Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "c4389f20f15647668f19-6ff41885fb6cbeae92ad",
+              "file": "03-employee-directory.spec.ts",
+              "line": 39,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "04-employee-crud.spec.ts",
+      "file": "04-employee-crud.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Employee CRUD, duplicates, and validation",
+          "file": "04-employee-crud.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-CREATE-01 / TR-EDIT-01 / TR-DEL-01 | administrator completes a CRUD lifecycle",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 910,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:43.213Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5d03432e670fd96fb69f-b778da95f1e03bfee4a8",
+              "file": "04-employee-crud.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "TR-DUP-01 | exact duplicate email displays existing employee and saves nothing",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 625,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:44.127Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "5d03432e670fd96fb69f-01f4b9297de4e9a23927",
+              "file": "04-employee-crud.spec.ts",
+              "line": 28,
+              "column": 7
+            },
+            {
+              "title": "TR-VAL-01 | server rejects negative salary when browser constraints are bypassed",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 1,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 541,
+                      "error": {
+                        "message": "Error: invalid salary must not be persisted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m",
+                        "stack": "Error: invalid salary must not be persisted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:59:68",
+                        "location": {
+                          "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                          "column": 68,
+                          "line": 59
+                        },
+                        "snippet": "  57 |     await directory.filter({ email });\n  58 |     const persisted = await directory.rows.count();\n> 59 |     expect.soft(persisted, 'invalid salary must not be persisted').toBe(0);\n     |                                                                    ^\n  60 |     if (persisted > 0) await directory.delete('Negative Salary');\n  61 |   });\n  62 |"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                            "column": 68,
+                            "line": 59
+                          },
+                          "message": "Error: invalid salary must not be persisted\n\n\u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoBe\u001b[2m(\u001b[22m\u001b[32mexpected\u001b[39m\u001b[2m) // Object.is equality\u001b[22m\n\nExpected: \u001b[32m0\u001b[39m\nReceived: \u001b[31m1\u001b[39m\n\n  57 |     await directory.filter({ email });\n  58 |     const persisted = await directory.rows.count();\n> 59 |     expect.soft(persisted, 'invalid salary must not be persisted').toBe(0);\n     |                                                                    ^\n  60 |     if (persisted > 0) await directory.delete('Negative Salary');\n  61 |   });\n  62 |\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:59:68"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:44.756Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                        "column": 68,
+                        "line": 59
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5d03432e670fd96fb69f-0964b420131d38901b33",
+              "file": "04-employee-crud.spec.ts",
+              "line": 39,
+              "column": 7
+            },
+            {
+              "title": "TR-ONB-01 | Create exposes the three onboarding selections required by the baseline",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 2,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8111,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/welcome email/i)\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel(/welcome email/i) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/welcome email/i)\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/welcome email/i)\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel(/welcome email/i) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/welcome email/i)\u001b[22m\n\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:65:53",
+                        "location": {
+                          "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                          "column": 53,
+                          "line": 65
+                        },
+                        "snippet": "  63 |   test('TR-ONB-01 | Create exposes the three onboarding selections required by the baseline', async ({ page }) => {\n  64 |     await page.goto('/Employee/Create');\n> 65 |     await expect(page.getByLabel(/welcome email/i)).toBeVisible();\n     |                                                     ^\n  66 |     await expect(page.getByLabel(/PF.*setup/i)).toBeVisible();\n  67 |     await expect(page.getByLabel(/IT equipment/i)).toBeVisible();\n  68 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                            "column": 53,
+                            "line": 65
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByLabel(/welcome email/i)\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByLabel(/welcome email/i) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByLabel(/welcome email/i)\u001b[22m\n\n\n  63 |   test('TR-ONB-01 | Create exposes the three onboarding selections required by the baseline', async ({ page }) => {\n  64 |     await page.goto('/Employee/Create');\n> 65 |     await expect(page.getByLabel(/welcome email/i)).toBeVisible();\n     |                                                     ^\n  66 |     await expect(page.getByLabel(/PF.*setup/i)).toBeVisible();\n  67 |     await expect(page.getByLabel(/IT equipment/i)).toBeVisible();\n  68 |   });\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:65:53"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:45.574Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts",
+                        "column": 53,
+                        "line": 65
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "5d03432e670fd96fb69f-27af2f2d67a3a02656f9",
+              "file": "04-employee-crud.spec.ts",
+              "line": 63,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "05-contributions-dashboard.spec.ts",
+      "file": "05-contributions-dashboard.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Contributions and workforce analytics",
+          "file": "05-contributions-dashboard.spec.ts",
+          "line": 5,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-PF-01 / TR-PF-02 | contribution directory and employee PF calculation are correct",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 393,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:54.135Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6797c326f3c556553f44-0833f39cf2e4f64e7fa7",
+              "file": "05-contributions-dashboard.spec.ts",
+              "line": 6,
+              "column": 7
+            },
+            {
+              "title": "TR-PF-04 | unknown contribution IDs return 404",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 16,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:54.762Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6797c326f3c556553f44-5bd453616eb2b4053b90",
+              "file": "05-contributions-dashboard.spec.ts",
+              "line": 16,
+              "column": 7
+            },
+            {
+              "title": "TR-DASH-01 | dashboard reconciles KPIs and distributions to the fixture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 308,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:54.782Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "6797c326f3c556553f44-d8f7f62156c5bea4a86d",
+              "file": "05-contributions-dashboard.spec.ts",
+              "line": 21,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "06-api.spec.ts",
+      "file": "06-api.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Read-only employee API",
+          "file": "06-api.spec.ts",
+          "line": 6,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-API-01 | missing and invalid keys are rejected",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.096Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-04c7ace13813da928c0f",
+              "file": "06-api.spec.ts",
+              "line": 7,
+              "column": 7
+            },
+            {
+              "title": "TR-API-02 / TR-API-05 | default paging and combined filters match the fixture",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 12,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.111Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-bf8feb0665976eeb063a",
+              "file": "06-api.spec.ts",
+              "line": 12,
+              "column": 7
+            },
+            {
+              "title": "TR-API-03 / TR-API-04 | paging parameters are normalized and no-match is empty",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 8,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.126Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-5fef12fd4f72812e5bbc",
+              "file": "06-api.spec.ts",
+              "line": 26,
+              "column": 7
+            },
+            {
+              "title": "TR-API-06 | single employee response includes the documented baseline schema",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 3,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 12,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"isWelcomeEmailSent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"age\": 18, \"durationWorked\": 6, \"email\": \"ann.alpha@team-a.example\", \"grade\": 1, \"id\": 1, \"name\": \"Ann Alpha\", \"salary\": 1000}\u001b[39m",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"isWelcomeEmailSent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"age\": 18, \"durationWorked\": 6, \"email\": \"ann.alpha@team-a.example\", \"grade\": 1, \"id\": 1, \"name\": \"Ann Alpha\", \"salary\": 1000}\u001b[39m\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts:47:22",
+                        "location": {
+                          "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts",
+                          "column": 22,
+                          "line": 47
+                        },
+                        "snippet": "  45 |       grade: 1\n  46 |     });\n> 47 |     expect(employee).toHaveProperty('isWelcomeEmailSent');\n     |                      ^\n  48 |     expect(employee).toHaveProperty('isPFAccountSetupCompleted');\n  49 |     expect(employee).toHaveProperty('isITEquipmentAssigned');\n  50 |   });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts",
+                            "column": 22,
+                            "line": 47
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mreceived\u001b[39m\u001b[2m).\u001b[22mtoHaveProperty\u001b[2m(\u001b[22m\u001b[32mpath\u001b[39m\u001b[2m)\u001b[22m\n\nExpected path: \u001b[32m\"isWelcomeEmailSent\"\u001b[39m\nReceived path: \u001b[31m[]\u001b[39m\n\nReceived value: \u001b[31m{\"age\": 18, \"durationWorked\": 6, \"email\": \"ann.alpha@team-a.example\", \"grade\": 1, \"id\": 1, \"name\": \"Ann Alpha\", \"salary\": 1000}\u001b[39m\n\n  45 |       grade: 1\n  46 |     });\n> 47 |     expect(employee).toHaveProperty('isWelcomeEmailSent');\n     |                      ^\n  48 |     expect(employee).toHaveProperty('isPFAccountSetupCompleted');\n  49 |     expect(employee).toHaveProperty('isITEquipmentAssigned');\n  50 |   });\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts:47:22"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.137Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts",
+                        "column": 22,
+                        "line": 47
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-3943956503f7be21a458",
+              "file": "06-api.spec.ts",
+              "line": 34,
+              "column": 7
+            },
+            {
+              "title": "TR-API-07 | unsupported write operations cannot mutate employees",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 15,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.355Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-f3d2a4879c8e8ab96b57",
+              "file": "06-api.spec.ts",
+              "line": 52,
+              "column": 7
+            },
+            {
+              "title": "TR-API-08 | Swagger UI and schema expose both GET operations and API-key security",
+              "ok": true,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "passed",
+                      "duration": 49,
+                      "errors": [],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.385Z",
+                      "annotations": [],
+                      "attachments": []
+                    }
+                  ],
+                  "status": "expected"
+                }
+              ],
+              "id": "0c21327f3d9961437a22-b54e6fbd579f5ce09171",
+              "file": "06-api.spec.ts",
+              "line": 60,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "title": "07-exports.spec.ts",
+      "file": "07-exports.spec.ts",
+      "column": 0,
+      "line": 0,
+      "specs": [],
+      "suites": [
+        {
+          "title": "Employee exports",
+          "file": "07-exports.spec.ts",
+          "line": 3,
+          "column": 6,
+          "specs": [
+            {
+              "title": "TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports",
+              "ok": false,
+              "tags": [],
+              "tests": [
+                {
+                  "timeout": 30000,
+                  "annotations": [],
+                  "expectedStatus": "passed",
+                  "projectId": "chromium",
+                  "projectName": "chromium",
+                  "results": [
+                    {
+                      "workerIndex": 4,
+                      "parallelIndex": 0,
+                      "status": "failed",
+                      "duration": 8183,
+                      "error": {
+                        "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /CSV/i })\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /CSV/i }) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /CSV/i })\u001b[22m\n",
+                        "stack": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /CSV/i })\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /CSV/i }) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /CSV/i })\u001b[22m\n\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts:6:60",
+                        "location": {
+                          "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts",
+                          "column": 60,
+                          "line": 6
+                        },
+                        "snippet": "  4 |   test('TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports', async ({ page }) => {\n  5 |     await page.goto('/Employee');\n> 6 |     await expect(page.getByRole('link', { name: /CSV/i })).toBeVisible();\n    |                                                            ^\n  7 |     await expect(page.getByRole('link', { name: /Excel|XLSX/i })).toBeVisible();\n  8 |   });\n  9 | });"
+                      },
+                      "errors": [
+                        {
+                          "location": {
+                            "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts",
+                            "column": 60,
+                            "line": 6
+                          },
+                          "message": "Error: \u001b[2mexpect(\u001b[22m\u001b[31mlocator\u001b[39m\u001b[2m).\u001b[22mtoBeVisible\u001b[2m(\u001b[22m\u001b[2m)\u001b[22m failed\n\nLocator: getByRole('link', { name: /CSV/i })\nExpected: visible\nTimeout: 7500ms\nError: element(s) not found\n\nCall log:\n\u001b[2m  - Expect \"toBeVisible\" getByRole('link', { name: /CSV/i }) with timeout 7500ms\u001b[22m\n\u001b[2m  - waiting for getByRole('link', { name: /CSV/i })\u001b[22m\n\n\n  4 |   test('TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports', async ({ page }) => {\n  5 |     await page.goto('/Employee');\n> 6 |     await expect(page.getByRole('link', { name: /CSV/i })).toBeVisible();\n    |                                                            ^\n  7 |     await expect(page.getByRole('link', { name: /Excel|XLSX/i })).toBeVisible();\n  8 |   });\n  9 | });\n    at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts:6:60"
+                        }
+                      ],
+                      "stdout": [],
+                      "stderr": [],
+                      "retry": 0,
+                      "startTime": "2026-11-02T06:00:55.437Z",
+                      "annotations": [],
+                      "attachments": [
+                        {
+                          "name": "screenshot",
+                          "contentType": "image/png",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/test-failed-1.png"
+                        },
+                        {
+                          "name": "video",
+                          "contentType": "video/webm",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/video.webm"
+                        },
+                        {
+                          "name": "error-context",
+                          "contentType": "text/markdown",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/error-context.md"
+                        },
+                        {
+                          "name": "trace",
+                          "contentType": "application/zip",
+                          "path": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/trace.zip"
+                        }
+                      ],
+                      "errorLocation": {
+                        "file": "/Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts",
+                        "column": 60,
+                        "line": 6
+                      }
+                    }
+                  ],
+                  "status": "unexpected"
+                }
+              ],
+              "id": "a8e2d46fb1d594f61318-f32c748844320eebdaa9",
+              "file": "07-exports.spec.ts",
+              "line": 4,
+              "column": 7
+            }
+          ]
+        }
+      ]
+    }
+  ],
+  "errors": [],
+  "stats": {
+    "startTime": "2026-11-02T06:00:32.404Z",
+    "duration": 31475.658,
+    "expected": 21,
+    "skipped": 0,
+    "unexpected": 4,
+    "flaky": 0
+  }
+}

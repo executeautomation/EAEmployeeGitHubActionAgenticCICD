@@ -1,0 +1,262 @@
+<testsuites id="" name="" tests="25" failures="4" skipped="0" errors="0" time="31.475658">
+<testsuite name="00-fixture.setup.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="setup" tests="1" failures="0" skipped="0" time="2.104" errors="0">
+<testcase name="TR-OPS-01 | initialize a fresh database and deterministic employee fixture" classname="00-fixture.setup.ts" time="2.104">
+</testcase>
+</testsuite>
+<testsuite name="01-public-navigation.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="3" failures="0" skipped="0" time="3.403" errors="0">
+<testcase name="Public navigation and authorization › TR-NAV-01 | public pages render with usable navigation" classname="01-public-navigation.spec.ts" time="2.825">
+</testcase>
+<testcase name="Public navigation and authorization › TR-NAV-02 / TR-AUTH-06 | anonymous user sees auth links and cannot open Create" classname="01-public-navigation.spec.ts" time="0.317">
+</testcase>
+<testcase name="Public navigation and authorization › TR-UX-02 | mobile navigation and public directory remain usable" classname="01-public-navigation.spec.ts" time="0.261">
+</testcase>
+</testsuite>
+<testsuite name="02-authentication.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="3" failures="0" skipped="0" time="1.29" errors="0">
+<testcase name="Authentication and roles › TR-AUTH-03 | invalid credentials show generic feedback" classname="02-authentication.spec.ts" time="0.358">
+</testcase>
+<testcase name="Authentication and roles › TR-AUTH-01 / TR-AUTH-06 | registered User can view details but cannot mutate employees" classname="02-authentication.spec.ts" time="0.428">
+</testcase>
+<testcase name="Authentication and roles › TR-AUTH-04 / TR-AUTH-05 | local return URL is honored and logout ends the session" classname="02-authentication.spec.ts" time="0.504">
+</testcase>
+</testsuite>
+<testsuite name="03-employee-directory.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="4" failures="0" skipped="0" time="1.147" errors="0">
+<testcase name="Employee directory, search, and pagination › TR-LIST-01 / TR-LIST-04 | directory shows five records, total, fields, and grade labels" classname="03-employee-directory.spec.ts" time="0.288">
+</testcase>
+<testcase name="Employee directory, search, and pagination › TR-LIST-02 | name, email, and grade filters combine with AND" classname="03-employee-directory.spec.ts" time="0.376">
+</testcase>
+<testcase name="Employee directory, search, and pagination › TR-LIST-03 | pagination retains active filters and Clear resets them" classname="03-employee-directory.spec.ts" time="0.467">
+</testcase>
+<testcase name="Employee directory, search, and pagination › TR-LIST-05 | invalid page values do not cause server errors" classname="03-employee-directory.spec.ts" time="0.016">
+</testcase>
+</testsuite>
+<testsuite name="04-employee-crud.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="4" failures="2" skipped="0" time="10.187" errors="0">
+<testcase name="Employee CRUD, duplicates, and validation › TR-CREATE-01 / TR-EDIT-01 / TR-DEL-01 | administrator completes a CRUD lifecycle" classname="04-employee-crud.spec.ts" time="0.91">
+</testcase>
+<testcase name="Employee CRUD, duplicates, and validation › TR-DUP-01 | exact duplicate email displays existing employee and saves nothing" classname="04-employee-crud.spec.ts" time="0.625">
+</testcase>
+<testcase name="Employee CRUD, duplicates, and validation › TR-VAL-01 | server rejects negative salary when browser constraints are bypassed" classname="04-employee-crud.spec.ts" time="0.541">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="invalid salary must not be persisted" type="expect.toBe">
+<![CDATA[  [chromium] › 04-employee-crud.spec.ts:39:7 › Employee CRUD, duplicates, and validation › TR-VAL-01 | server rejects negative salary when browser constraints are bypassed 
+
+    Error: invalid salary must not be persisted
+
+    expect(received).toBe(expected) // Object.is equality
+
+    Expected: 0
+    Received: 1
+
+      57 |     await directory.filter({ email });
+      58 |     const persisted = await directory.rows.count();
+    > 59 |     expect.soft(persisted, 'invalid salary must not be persisted').toBe(0);
+         |                                                                    ^
+      60 |     if (persisted > 0) await directory.delete('Negative Salary');
+      61 |   });
+      62 |
+        at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:59:68
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/artifacts/04-employee-crud-Employee--8e739-er-constraints-are-bypassed-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Employee CRUD, duplicates, and validation › TR-ONB-01 | Create exposes the three onboarding selections required by the baseline" classname="04-employee-crud.spec.ts" time="8.111">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › 04-employee-crud.spec.ts:63:7 › Employee CRUD, duplicates, and validation › TR-ONB-01 | Create exposes the three onboarding selections required by the baseline 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByLabel(/welcome email/i)
+    Expected: visible
+    Timeout: 7500ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByLabel(/welcome email/i) with timeout 7500ms
+      - waiting for getByLabel(/welcome email/i)
+
+
+      63 |   test('TR-ONB-01 | Create exposes the three onboarding selections required by the baseline', async ({ page }) => {
+      64 |     await page.goto('/Employee/Create');
+    > 65 |     await expect(page.getByLabel(/welcome email/i)).toBeVisible();
+         |                                                     ^
+      66 |     await expect(page.getByLabel(/PF.*setup/i)).toBeVisible();
+      67 |     await expect(page.getByLabel(/IT equipment/i)).toBeVisible();
+      68 |   });
+        at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/04-employee-crud.spec.ts:65:53
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/artifacts/04-employee-crud-Employee--cd8f9-ns-required-by-the-baseline-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+<testsuite name="05-contributions-dashboard.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="3" failures="0" skipped="0" time="0.717" errors="0">
+<testcase name="Contributions and workforce analytics › TR-PF-01 / TR-PF-02 | contribution directory and employee PF calculation are correct" classname="05-contributions-dashboard.spec.ts" time="0.393">
+</testcase>
+<testcase name="Contributions and workforce analytics › TR-PF-04 | unknown contribution IDs return 404" classname="05-contributions-dashboard.spec.ts" time="0.016">
+</testcase>
+<testcase name="Contributions and workforce analytics › TR-DASH-01 | dashboard reconciles KPIs and distributions to the fixture" classname="05-contributions-dashboard.spec.ts" time="0.308">
+</testcase>
+</testsuite>
+<testsuite name="06-api.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="6" failures="1" skipped="0" time="0.108" errors="0">
+<testcase name="Read-only employee API › TR-API-01 | missing and invalid keys are rejected" classname="06-api.spec.ts" time="0.012">
+</testcase>
+<testcase name="Read-only employee API › TR-API-02 / TR-API-05 | default paging and combined filters match the fixture" classname="06-api.spec.ts" time="0.012">
+</testcase>
+<testcase name="Read-only employee API › TR-API-03 / TR-API-04 | paging parameters are normalized and no-match is empty" classname="06-api.spec.ts" time="0.008">
+</testcase>
+<testcase name="Read-only employee API › TR-API-06 | single employee response includes the documented baseline schema" classname="06-api.spec.ts" time="0.012">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(received).toHaveProperty(path)" type="expect.toHaveProperty">
+<![CDATA[  [chromium] › 06-api.spec.ts:34:7 › Read-only employee API › TR-API-06 | single employee response includes the documented baseline schema 
+
+    Error: expect(received).toHaveProperty(path)
+
+    Expected path: "isWelcomeEmailSent"
+    Received path: []
+
+    Received value: {"age": 18, "durationWorked": 6, "email": "ann.alpha@team-a.example", "grade": 1, "id": 1, "name": "Ann Alpha", "salary": 1000}
+
+      45 |       grade: 1
+      46 |     });
+    > 47 |     expect(employee).toHaveProperty('isWelcomeEmailSent');
+         |                      ^
+      48 |     expect(employee).toHaveProperty('isPFAccountSetupCompleted');
+      49 |     expect(employee).toHaveProperty('isITEquipmentAssigned');
+      50 |   });
+        at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/06-api.spec.ts:47:22
+
+    Error Context: ../../test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/error-context.md
+
+    attachment #2: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/artifacts/06-api-Read-only-employee--2a09d--documented-baseline-schema-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+<testcase name="Read-only employee API › TR-API-07 | unsupported write operations cannot mutate employees" classname="06-api.spec.ts" time="0.015">
+</testcase>
+<testcase name="Read-only employee API › TR-API-08 | Swagger UI and schema expose both GET operations and API-key security" classname="06-api.spec.ts" time="0.049">
+</testcase>
+</testsuite>
+<testsuite name="07-exports.spec.ts" timestamp="2026-11-02T06:00:34.395Z" hostname="chromium" tests="1" failures="1" skipped="0" time="8.183" errors="0">
+<testcase name="Employee exports › TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports" classname="07-exports.spec.ts" time="8.183">
+<system-out>
+<![CDATA[
+[[ATTACHMENT|../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/test-failed-1.png]]
+
+[[ATTACHMENT|../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/video.webm]]
+
+[[ATTACHMENT|../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/error-context.md]]
+
+[[ATTACHMENT|../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/trace.zip]]
+]]>
+</system-out>
+<failure message="expect(locator).toBeVisible() failed" type="expect.toBeVisible">
+<![CDATA[  [chromium] › 07-exports.spec.ts:4:7 › Employee exports › TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports 
+
+    Error: expect(locator).toBeVisible() failed
+
+    Locator: getByRole('link', { name: /CSV/i })
+    Expected: visible
+    Timeout: 7500ms
+    Error: element(s) not found
+
+    Call log:
+      - Expect "toBeVisible" getByRole('link', { name: /CSV/i }) with timeout 7500ms
+      - waiting for getByRole('link', { name: /CSV/i })
+
+
+      4 |   test('TR-EXP-01 / TR-EXP-02 | directory offers CSV and XLSX exports', async ({ page }) => {
+      5 |     await page.goto('/Employee');
+    > 6 |     await expect(page.getByRole('link', { name: /CSV/i })).toBeVisible();
+        |                                                            ^
+      7 |     await expect(page.getByRole('link', { name: /Excel|XLSX/i })).toBeVisible();
+      8 |   });
+      9 | });
+        at /Users/karthikkk/tryout/GitHub/EAEmployeeAppv2.0/e2e/tests/07-exports.spec.ts:6:60
+
+    attachment #1: screenshot (image/png) ──────────────────────────────────────────────────────────
+    ../../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/test-failed-1.png
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    attachment #2: video (video/webm) ──────────────────────────────────────────────────────────────
+    ../../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/video.webm
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+
+    Error Context: ../../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/error-context.md
+
+    attachment #4: trace (application/zip) ─────────────────────────────────────────────────────────
+    ../../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/trace.zip
+    Usage:
+
+        npx playwright show-trace ../../test-results/artifacts/07-exports-Employee-export-32090-offers-CSV-and-XLSX-exports-chromium/trace.zip
+
+    ────────────────────────────────────────────────────────────────────────────────────────────────
+]]>
+</failure>
+</testcase>
+</testsuite>
+</testsuites>
