@@ -1,6 +1,11 @@
 import { defineConfig, devices } from '@playwright/test';
 
 const baseURL = process.env.PLAYWRIGHT_BASE_URL ?? 'http://127.0.0.1:5114';
+const browserChannel = process.env.PLAYWRIGHT_BROWSER_CHANNEL ?? (process.env.CI ? undefined : 'chrome');
+const desktopBrowser = {
+  ...devices['Desktop Chrome'],
+  ...(browserChannel ? { channel: browserChannel } : {})
+};
 
 export default defineConfig({
   testDir: './e2e/tests',
@@ -39,15 +44,14 @@ export default defineConfig({
     {
       name: 'setup',
       testMatch: /.*\.setup\.ts/,
-      use: { ...devices['Desktop Chrome'], channel: 'chrome' }
+      use: desktopBrowser
     },
     {
       name: 'chromium',
       testIgnore: /.*\.setup\.ts/,
       dependencies: ['setup'],
       use: {
-        ...devices['Desktop Chrome'],
-        channel: 'chrome',
+        ...desktopBrowser,
         storageState: 'e2e/.auth/admin.json'
       }
     }

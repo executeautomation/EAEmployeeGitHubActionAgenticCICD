@@ -11,6 +11,8 @@ npm test
 
 The default run starts the application at `http://127.0.0.1:5114`, recreates `.playwright-data/e2e.sqlite`, uses the installed Google Chrome channel, executes setup plus the complete suite with one worker, and writes reports.
 
+In GitHub Actions, `.github/workflows/e2e.yml` builds the application in Release mode, installs Playwright's managed Chromium, and runs the same suite. The application starts alongside the tests, applies its Entity Framework migrations, and seeds the isolated SQLite database before Playwright proceeds.
+
 To test an already-running deployment:
 
 ```bash
