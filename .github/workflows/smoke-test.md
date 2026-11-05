@@ -16,7 +16,10 @@ network:
   allowed: [defaults, playwright]
 
 safe-outputs:
-  create-issue: false
+  add-comment:
+    max: 1
+    target: triggering
+    required-title-prefix: "[smoke-test]"
 
 tools:
   playwright:
@@ -59,7 +62,11 @@ models:
 Run the smoke checks on the checked-out commit. Do not edit application or test
 files as part of this workflow. Only execute this task for an issue whose title
 starts with `[smoke-test]`. Report each check's result and, on failure, the
-failed action and relevant application or CLI output.
+failed action and relevant application or CLI output. When the run completes,
+always use the `add_comment` safe output to post one concise result comment on
+the triggering issue. Include an overall PASS or FAIL, the result of the home,
+login, employee CRUD, and dashboard checks, and relevant failure details. Do
+not post the result through `gh`, the GitHub API, or any other direct write.
 
 Use the Playwright CLI (`playwright-cli`) for all browser interaction. Do not run
 `npm test`, `playwright test`, or use the Playwright Test API. Start the
